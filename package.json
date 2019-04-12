@@ -1,0 +1,36 @@
+{
+  "name": "miraiten2019winter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp",
+    "watch": "gulp watch",
+    "sass": "gulp sass",
+    "pug": "gulp pug",
+    "dev": "gulp build --development",
+    "prod": "gulp build --production",
+    "js": "gulp js",
+    "copy": "gulp copy",
+    "image": "gulp image",
+    "ejs": "gulp ejs"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2"
+  },
+  "path": {
+    "assetsDir": "./assets/"
+  },
+  "dependencies": {
+    "gulp-connect": "^5.7.0"
+  }
+}
