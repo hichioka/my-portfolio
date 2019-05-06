@@ -2,11 +2,33 @@ doctype html
 block vars
 html(lang="ja")
   head
-    include _head.pug
+    block title
+      title HIKARU's portfolios
+    meta(charset="utf-8")
+    meta(property="og:url" content="")
+    meta(property="og:title" content="Hikaru Ichioka's Portfolio" )
+    meta(property="og:type" content="webpage")
+    meta(property="og:description" content="イチオカヒカルのポートフォリオです" )
+    meta(http-equiv="content-type"  content="text/html" charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    meta(name="description" content="イチオカヒカルのポートフォリオです")
+    meta(name="robots" content="noindex,follow")
+    meta(name="format-detection" content="email=no,telephone=no,address=no")
+    link(rel="shortcut icon" href="../img/favicon.ico")
+
+    block css
+      link(rel="stylesheet" type="text/css" href="css/reboot.css")
+      link(rel="stylesheet" type="text/css" href="css/main.css")
+    block js
+      script(src="https://use.typekit.net/sqt6uei.js")
+      script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")
+      script(type="text/javascript" src="js/main.js")
 
   body(class=key)
     .l_contents
       include _header.pug
       //- include _nav.pug
-      block contents
+      //- block contents
+      include _contents.pug
     include _footer.pug
