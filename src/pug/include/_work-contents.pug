@@ -1,46 +1,111 @@
 -
     var arr = [
         {
+            link: 'https://pianissimo.life',
+            img : '../img/pianissimo.JPG',
+            img_ab: 'http://i-hikaru.secret.jp/portfolio/portfolio_test/img/',
             class : 'work1',
             title : 'pianissimo',
             description : '自然と優しく磨ける歯ブラシ',
-            img : './work1.jpg',
-            date : '2017/12/8'
+            date : '2018年11月 ~ 2019/2月'
         },
         {
+          link: '../pianissimo.html',
+            img : '../img/dejisibai.jpg',
+            img_ab: 'http://i-hikaru.secret.jp/portfolio/portfolio_test/img/',
             class : 'work2',
             title : 'デジ芝居屋さん',
             description : 'パフォーマンス型屋台',
-            img : './work2.jpg',
-            date : '2017/12/9'
+            date : '2018/10月 ~ 2018年11月'
         },
         {
+            link: '../pianissimo.html',
+            img : '../img/miraiten2018summer.png',
+            img_ab: 'http://i-hikaru.secret.jp/portfolio/portfolio_test/img/',
             class : 'work3',
             title : '未来展2018夏webページ',
             description : 'はこだて未来大学デザインコース展示会のwebページ',
-            img : './work3.jpg',
-            date : '2017/12/10'
+            date : '2018/7月'
         },
         {
+            link: '../pianissimo.html',
+            img : '../img/miraiten2019winter.jpg',
+            img_ab: 'http://i-hikaru.secret.jp/portfolio/portfolio_test/img/',
             class : 'work4',
             title : '未来展2019冬webページ',
             description : 'はこだて未来大学デザインコース展示会のwebページ',
-            img : './work4.jpg',
-            date : '2017/12/10'
+            date : '2019/1月'
+        },
+        {
+            link: '../pianissimo.html',
+            img : '../img/info_konbu.jpg',
+            img_ab: 'http://i-hikaru.secret.jp/portfolio/portfolio_test/img/',
+            class : 'work5',
+            title : '昆布　インフォグラフィックス',
+            description : '北海道の昆布の図解',
+            date : '2018/6月 ~ 2018年7月'
+        },
+        {
+            link: '../pianissimo.html',
+            img : '../img/pp_poster2.jpg',
+            img_ab: 'http://i-hikaru.secret.jp/portfolio/portfolio_test/img/',
+            class : 'work5',
+            title : 'pianissimo プロモーションポスター',
+            description : '北海道の昆布の図解',
+            date : '2018/6月 ~ 2018年7月'
+        },
+        {
+            link: '../pianissimo.html',
+            img : '../img/deji_info.jpg',
+            img_ab: 'http://i-hikaru.secret.jp/portfolio/portfolio_test/img/',
+            class : 'work5',
+            title : 'デジ芝居屋さん　インフォグラフィックス',
+            description : '北海道の昆布の図解',
+            date : '2018/6月 ~ 2018年7月'
+        },
+        {
+            link: '../pianissimo.html',
+            img : '../img/CHUGクリスマスフライヤー.png',
+            img_ab: 'http://i-hikaru.secret.jp/portfolio/portfolio_test/img/',
+            class : 'work6',
+            title : 'ストリートダンスサークル　クリスマスイベントフライヤー',
+            description : '所属サークルのイベントフライヤー',
+            date : '2018/12月'
+        },
+        {
+            link: '../pianissimo.html',
+            img : '../img/2019CHUG入学式フライヤー.png',
+            img_ab: 'http://i-hikaru.secret.jp/portfolio/portfolio_test/img/',
+            class : 'work7',
+            title : 'ストリートダンスサークル　新入生向けフライヤー',
+            description : '所属サークルの新入生に向けた紹介フライヤー',
+            date : '2019/3月'
+        },
+        {
+            link: 'https://youtu.be/hrWjRSIPHvI',
+            img : '../img/pianissimoサムネ.png',
+            img_ab: 'http://i-hikaru.secret.jp/portfolio/portfolio_test/img/',
+            class : 'work8',
+            title : 'pianissimo プロモーションビデオ',
+            description : 'pianissimo プロモーションビデオ',
+            date : '2019/3月'
+        },
+        {
+            link: 'https://youtu.be/rwgMmQt3EhA',
+            img : '../img/deji_mov.png',
+            img_ab: 'http://i-hikaru.secret.jp/portfolio/portfolio_test/img/deji_mov.png',
+            class : 'work9',
+            title : ' デジ芝居屋さん　紹介動画',
+            description : 'パフォーマンス型屋台 デジ芝居屋さん　紹介動画',
+            date : '2018/11月'
         },
     ];
-mixin work_list(c_name, _title, _desc, _img, _date)
-  ul
-    li
-      h2.work_item #{_title}
-      p #{_desc}
-      img(src=_img)
-      p #{_date}
-
-//- //-  取り出し
-//- ul
-//-     each item in arr
-//-         set_list(item.title, item.description, item.img, item.date)
+mixin work_list(_link, _img, c_name, _title, _desc, _date)
+  li.one_work
+    a(href=_link): img.work_img(src=_img)
+    h2.work_title #{_title}
+    p.work_desc #{_desc}
+    p.work_data 制作期間 #{_date}
 
 each item in arr
-  +work_list(item.class, item.title, item.description, item.img, item.date)
+  +work_list(item.link, item.img, item.class, item.title, item.description, item.date)

@@ -1,5 +1,6 @@
 $(function() {
-    $('.navToggle').click(function() {
+	if($(window).width() < 768){}
+     $('.navToggle').click(function() {
         $(this).toggleClass('active');
         if ($(this).hasClass('active')) {
             $('.globalMenuSp').addClass('active');
@@ -8,6 +9,8 @@ $(function() {
         }
     });
 });
+
+
 $(function(){
 	var page=0;
 	var lastPage =parseInt($("#slide img").length-1);

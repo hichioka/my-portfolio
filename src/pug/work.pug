@@ -1,3 +1,14 @@
 extends include/_layout.pug
 block title
   title WORK
+
+block body
+  body.work
+    block section
+      section.work_top
+        h1.work_title 制作作品
+        p.work_txt Ichioka's works
+      section.works
+        div.container
+          ul.work_l
+            include include/_work-contents.pug

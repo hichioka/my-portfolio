@@ -25,9 +25,13 @@ html(lang="ja")
       script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")
       script(type="text/javascript" src="js/main.js")
 
-  body.l_contents
-    include _header.pug
-    //- include _nav.pug
-    //- block contents
-    include _contents.pug
+block body
+  body
+
+    block section 
+      section.section_name
+        h2 sub_title
+        p detail
+        
     include _footer.pug
+

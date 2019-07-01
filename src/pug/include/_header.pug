@@ -2,7 +2,7 @@
 //- エリアでフォーカス
 header
   div.navToggle
-    - for (var x=0; x<2; x++)
+    - for (var x=0; x<3; x++)
       span
   nav.globalMenuSp
     ul
@@ -15,11 +15,10 @@ header
       //- ]
       //- each item in list
       //-    li = item
-      li: img.menu_logo(src="" alt="HIKARU's portfolio")
       li: a(href="./index.html") HOME
       li: a(href="./about.html") ABOUT
       li: a(href="./work.html") WORKS
-      li: a(href="./contact.html") CONTACT
+      li: a(href="./.html") CONTACT
 
       //-
       //- nav.globalMenuSp 本番用絶対パス
@@ -29,3 +28,5 @@ header
       //-     li: a(href="https://2019w.miraiten.fun/yatai.html") 屋台概要
       //-     li: a(href="https://2019w.miraiten.fun/crowdfunding.html") クラファン概要
       //-     li: a(href="https://2019w.miraiten.fun/access.html") アクセス
+
+      
